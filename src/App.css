@@ -1,0 +1,317 @@
+/* Global styles for responsiveness */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header nav h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header nav ul li a:hover {
+  color: blue;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Main Banner */
+.main-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-banner img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 230px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+/* About Me Section */
+.about-me {
+  padding: 40px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.about-me h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-me img {
+  margin-top: 25px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+.projects h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 30px);
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #007bff;
+}
+
+.project-card p {
+  font-size: 16px;
+}
+
+/* Skills Section */
+.skills {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+.skills h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skill-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 20px);
+  text-align: center;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.skill-card p {
+  font-size: 16px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info p {
+  font-size: 18px;
+}
+
+.contact-info a {
+  margin-left: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #0056b3;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-overlay {
+    font-size: 28px;
+  }
+
+  .main-banner img {
+    height: 400px;
+  }
+
+  .about-me img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .skill-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-overlay {
+    font-size: 22px;
+  }
+
+  .main-banner img {
+    height: 300px;
+  }
+
+  .about-me h2,
+  .projects h2,
+  .skills h2 {
+    font-size: 24px;
+  }
+
+  .about-me p {
+    font-size: 16px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+
+  .contact h2 {
+    font-size: 20px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+}
